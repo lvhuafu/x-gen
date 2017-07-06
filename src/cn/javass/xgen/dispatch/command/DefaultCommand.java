@@ -37,5 +37,12 @@ public class DefaultCommand implements GenCommand {
         for (int i = 0; i <listNeedGenTypes.size() ; i++) {
             mapHandler.put(i+1,new DefaultHandler(listNeedGenTypes.get(i)));
         }
+        //3.把map里面的数据按照顺序获取出来，构建职责链
+        GenHandler h1 = mapHandler.get(1);
+        for (int i = 1; i <mapHandler.values().size() ; i++) {
+            mapHandler.get(i).setSuccessor(mapHandler.get(i+1));
+        }
+        //执行请求
+        h1.handlerRequest(moduleConf);
     }
 }
