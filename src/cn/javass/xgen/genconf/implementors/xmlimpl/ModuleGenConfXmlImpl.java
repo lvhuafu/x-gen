@@ -113,14 +113,13 @@ public class ModuleGenConfXmlImpl implements ModuleGenConfImplementor {
         Map<String, List<String>> map = new HashMap<>();
         ReadXmlExpression re = Parser.parse(
                 new ModuleGenConfBuilder().addModuleGenConf().addSeparator().addNeedGenTypes().addSeparator()
-                        .addNeedGenType().addDollar().addId().addDollar()
+                        .addNeedGenType().addDollar().addDot().addId().addDollar()
                         .build()
         );
         String[] needGenTypes = re.interpret(ctx);
         for (String s:needGenTypes) {
             map.put(s,parseNeedGenOutTypes(ctx,s));
         }
-
         return map;
     }
     private List<String> parseNeedGenOutTypes(Context ctx,String needGenId){

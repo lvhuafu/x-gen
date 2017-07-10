@@ -20,4 +20,13 @@ public class GenConfFactory {
     public static GenConfEbi createGenConfEbi(GenConfImplementor provider) {
         return GenConfEbo.getInstance(provider);
     }
+
+    /**
+     * 创建访问核心配置的对象接口，前提是确保已经获取了配置数据，这个方法才能正确执行
+     * @return
+     */
+    public static GenConfEbi createGenConfEbi(){
+        return GenConfEbo.getInstance(null);
+    }
 }
+

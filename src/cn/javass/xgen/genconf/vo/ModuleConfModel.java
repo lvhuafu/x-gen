@@ -49,7 +49,7 @@ public class ModuleConfModel {
         this.mapExtends = mapExtends;
     }
 
-    public Map<String, List<String>> getMapNeedGenTepys() {
+    public Map<String, List<String>> getMapNeedGenTypes() {
         return mapNeedGenTepys;
     }
 

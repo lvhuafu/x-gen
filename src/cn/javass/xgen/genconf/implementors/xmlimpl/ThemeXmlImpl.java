@@ -28,7 +28,7 @@ public class ThemeXmlImpl implements ThemeConfImplementor {
             String[] paramaValues = parseGenTypeParamValues(this.getContext(param),gtm.getId());
             Map<String,String> paramMap = new HashMap<>();
             for (int j = 0; j < paramIds.length; j++) {
-                param.put(paramIds[j],paramaValues[j]);
+                paramMap.put(paramIds[j],paramaValues[j]);
             }
             gtm.setMapParams(paramMap);
             map.put(gtm.getId(),gtm);

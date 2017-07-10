@@ -1,5 +1,6 @@
 package cn.javass.xgen;
 
+import cn.javass.xgen.dispatch.GenFacade;
 import cn.javass.xgen.genconf.GenConfEbi;
 import cn.javass.xgen.genconf.GenConfFactory;
 import cn.javass.xgen.genconf.implementors.xmlimpl.GenConfXmlImpl;
@@ -54,7 +55,8 @@ public class MyTest {
 //        for (String s : ss1) {
 //            System.out.println("ss=="+s);
 //        }
-        GenConfEbi ebi = GenConfFactory.createGenConfEbi(new GenConfXmlImpl());
-        System.out.println("gm------"+ebi.getMapModuleConf());
+//        GenConfEbi ebi = GenConfFactory.createGenConfEbi(new GenConfXmlImpl());
+//        System.out.println("gm------"+ebi.getMapModuleConf());
+        GenFacade.generate();
     }
 }
