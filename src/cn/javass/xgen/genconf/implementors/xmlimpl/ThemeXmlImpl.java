@@ -119,7 +119,7 @@ public class ThemeXmlImpl implements ThemeConfImplementor {
         c.init();
         ReadXmlExpression re = Parser.parse(
                 new ThemeBuilder().addTheme().addSeparator()
-                        .addGenOutTpyes().addSeparator().addGenOutTpye().addDollar()
+                        .addGenOutTypes().addSeparator().addGenOutType().addDollar()
                         .addDot().addId().addDollar().build()
         );
         return re.interpret(c);
@@ -128,7 +128,7 @@ public class ThemeXmlImpl implements ThemeConfImplementor {
         c.init();
         ReadXmlExpression re = Parser.parse(
                 new ThemeBuilder().addTheme().addSeparator()
-                        .addGenOutTpyes().addSeparator().addGenOutTpye().addDollar()
+                        .addGenOutTypes().addSeparator().addGenOutType().addDollar()
                         .addDot().addtype().addDollar().build()
         );
         return re.interpret(c);

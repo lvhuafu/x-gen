@@ -33,12 +33,12 @@ public class ThemeBuilder extends CommonBuilder<ThemeBuilder> {
         buffer.append(ThemeEnum.type);
         return this;
     }
-    public ThemeBuilder addGenOutTpyes(){
-        buffer.append(ThemeEnum.GenOutTpyes);
+    public ThemeBuilder addGenOutTypes(){
+        buffer.append(ThemeEnum.GenOutTypes);
         return this;
     }
-    public ThemeBuilder addGenOutTpye(){
-        buffer.append(ThemeEnum.GenOutTpye);
+    public ThemeBuilder addGenOutType(){
+        buffer.append(ThemeEnum.GenOutType);
         return this;
     }
     public ThemeBuilder addProviders(){

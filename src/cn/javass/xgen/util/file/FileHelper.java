@@ -11,6 +11,11 @@ public class FileHelper {
 
     }
 
+    public static void genDir(String dirPath){
+        File f = new File(dirPath);
+        f.mkdirs();
+    }
+
     public static String readFile(String path){
         String content = "";
         DataInputStream din = null;
@@ -39,16 +44,16 @@ public class FileHelper {
         DataOutputStream dout = null;
         try {
             f.createNewFile();
-            dout = new DataOutputStream(new BufferedOutputStream(
-                    new FileOutputStream(f)));
+            dout = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(f)));
             dout.write(content.getBytes());
         } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
             try {
                 dout.close();
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
-            e.printStackTrace();
         }
     }
 }

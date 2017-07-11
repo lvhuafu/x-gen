@@ -10,7 +10,7 @@
 			<NeedGenOutType id="Console"></NeedGenOutType>
 			<NeedGenOutType id="File"></NeedGenOutType>
 		</NeedGenType>
-		<!-- 
+		<!--
 		<NeedGenType id="GenBusinessEbo">
 			<NeedGenOutType id="File"></NeedGenOutType>
 		</NeedGenType>
